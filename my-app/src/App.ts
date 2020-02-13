@@ -1,7 +1,3 @@
-import React from "react";
-// import logo from "./logo.svg";
-import "./App.css";
-
 class ReactSkycons extends React.Component {
   state = {
     skycons: new Skycons({ color: this.props.color })
@@ -335,4 +331,4 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //   );
 // }
 
-export default App;
+// export default App;
