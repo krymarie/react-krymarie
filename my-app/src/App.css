@@ -1,54 +1,7 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 body {
   font-family: "Roboto", sans-serif;
-  background: radial-gradient(rgba(0, 0, 0, 0.3), #000);
-}
-
-.badge {
-  margin-top: 0.8em;
-  font-size: 4rem;
-  text-align: center;
-  color: #fff;
 }
 
 a:link,
@@ -63,53 +16,6 @@ a:visited {
   justify-content: center;
 }
 
-.device {
-  background-color: #000;
-  border: 3px solid #2f2f2f;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
-}
-
-header,
-footer {
-  height: 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.notification-light {
-  background-color: #adff2f;
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  position: absolute;
-  left: 25px;
-  top: calc(2em - 3px);
-}
-
-.camera {
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  border: 4px solid rgb(132, 129, 132);
-  background-color: #323232;
-  position: absolute;
-  left: 70px;
-  top: calc(2em - 3px - 2px);
-}
-
-.speaker {
-  height: 10px;
-  width: 150px;
-  border-radius: 15px;
-  border: 3px solid #141414;
-  box-shadow: inset 0 0 0 2px #323232;
-}
-
 .screen {
   width: 24em;
   min-height: 44em;
@@ -121,24 +27,6 @@ footer {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.power-button {
-  position: absolute;
-  width: 5px;
-  height: 48px;
-  left: 24.5em;
-  background-color: #000;
-  top: 222px;
-}
-
-.volume-button {
-  position: absolute;
-  width: 5px;
-  height: 96px;
-  left: 24.5em;
-  background-color: #000;
-  top: 310px;
 }
 
 .nav {
