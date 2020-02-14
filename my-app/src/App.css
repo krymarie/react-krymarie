@@ -19,10 +19,11 @@ a:visited {
 .screen {
   width: 24em;
   min-height: 44em;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(6, 209, 229),
-    rgb(119, 239, 251)
+  background: linear-gradient(
+    356deg,
+    rgba(166, 166, 166, 1) 0%,
+    rgba(36, 35, 35, 1) 0%,
+    rgba(82, 85, 85, 1) 100%
   );
   position: relative;
   display: flex;
@@ -94,8 +95,8 @@ a:visited {
   justify-content: space-around;
   font-size: 1.1rem;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
-  background-color: #05bacc;
-  border-bottom: 2px solid #05bacc;
+  background-color: #2d2c2c;
+  border-bottom: 2px solid #2d2c2c;
   list-style-type: none;
   padding: 0.5em;
   margin: 0;
