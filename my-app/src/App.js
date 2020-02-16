@@ -1,14 +1,8 @@
 import React from "react";
-import moment from "moment"; //see if this is in dependancies
-
-import ReactDOM from "react-dom";
-import Skycons from "skycons";
+import moment from "moment";
+// import Skycons from "skycons";
 import "./index.css";
-// import App from "./App";
-// import * as serviceWorker from "./serviceWorker";
 
-// ("use strict");
-/* Based on (React Skycons)[https://github.com/roadmanfong/react-skycons/] */
 var __extends =
   (this && this.__extends) ||
   (function() {
@@ -42,12 +36,10 @@ var __assign =
       Object.assign ||
       function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
-          // if (window.CP.shouldStopExecution(0)) break;
           s = arguments[i];
           for (var p in s)
             if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
-        // window.CP.exitedLoop(0);
         return t;
       };
     return __assign.apply(this, arguments);
@@ -117,7 +109,6 @@ var __generator =
     function step(op) {
       if (f) throw new TypeError("Generator is already executing.");
       while (_) {
-        // if (window.CP.shouldStopExecution(1)) break;
         try {
           if (
             ((f = 1),
@@ -184,61 +175,61 @@ var __generator =
           f = t = 0;
         }
       }
-      // window.CP.exitedLoop(1);
       if (op[0] & 5) throw op[1];
       return { value: op[0] ? op[1] : void 0, done: true };
     }
   };
-var ReactSkycons = /** @class */ (function(_super) {
-  __extends(ReactSkycons, _super);
-  function ReactSkycons() {
-    var _this = (_super !== null && _super.apply(this, arguments)) || this;
-    _this.state = {
-      skycons: new Skycons({ color: _this.props.color })
-    };
+// var ReactSkycons = /** @class */ (function(_super) {
+//   __extends(ReactSkycons, _super);
+//   function ReactSkycons() {
+//     var _this = (_super !== null && _super.apply(this, arguments)) || this;
+//     _this.state = {
+//       skycons: new Skycons({ color: _this.props.color })
+//     };
 
-    return _this;
-  }
-  ReactSkycons.prototype.componentDidMount = function() {
-    this.state.skycons.add(
-      ReactDOM.findDOMNode(this),
-      Skycons[this.fixNaming(this.props.icon)]
-    );
-    if (this.props.autoPlay) {
-      this.state.skycons.play();
-    }
-    this.fixNaming = this.fixNaming.bind(this);
-  };
-  ReactSkycons.prototype.componentWillReceiveProps = function(nextProps) {
-    this.state.skycons.set(
-      ReactDOM.findDOMNode(this),
-      Skycons[this.fixNaming(nextProps.icon)]
-    );
-  };
-  ReactSkycons.prototype.componentWillUnmount = function() {
-    this.state.skycons.pause();
-    this.state.skycons.remove(ReactDOM.findDOMNode(this));
-  };
-  ReactSkycons.prototype.play = function() {
-    this.state.skycons.play();
-  };
-  ReactSkycons.prototype.pause = function() {
-    this.state.skycons.pause();
-  };
-  ReactSkycons.prototype.fixNaming = function(iconName) {
-    return iconName.replace(/-/g, "_");
-  };
-  ReactSkycons.prototype.render = function() {
-    var defaultStyle = {
-      height: "100%"
-    };
-    return React.createElement(
-      "canvas",
-      __assign({ style: defaultStyle }, this.props)
-    );
-  };
-  return ReactSkycons;
-})(React.Component);
+//     return _this;
+//   }
+//   ReactSkycons.prototype.componentDidMount = function() {
+//     this.state.skycons.add(
+//       ReactDOM.findDOMNode(this),
+//       Skycons[this.fixNaming(this.props.icon)]
+//     );
+//     if (this.props.autoPlay) {
+//       this.state.skycons.play();
+//     }
+//     this.fixNaming = this.fixNaming.bind(this);
+//   };
+//   ReactSkycons.prototype.componentWillReceiveProps = function(nextProps) {
+//     this.state.skycons.set(
+//       ReactDOM.findDOMNode(this),
+//       Skycons[this.fixNaming(nextProps.icon)]
+//     );
+//   };
+//   ReactSkycons.prototype.componentWillUnmount = function() {
+//     this.state.skycons.pause();
+//     this.state.skycons.remove(ReactDOM.findDOMNode(this));
+//   };
+//   ReactSkycons.prototype.play = function() {
+//     this.state.skycons.play();
+//   };
+//   ReactSkycons.prototype.pause = function() {
+//     this.state.skycons.pause();
+//   };
+//   ReactSkycons.prototype.fixNaming = function(iconName) {
+//     return iconName.replace(/-/g, "_");
+//   };
+//   ReactSkycons.prototype.render = function() {
+//     var defaultStyle = {
+//       height: "100%"
+//     };
+
+//     return React.createElement(
+//       "canvas",
+//       __assign({ style: defaultStyle }, this.props)
+//     );
+//   };
+//   return ReactSkycons;
+// })(React.Component);
 var More = function(_a) {
   var toggleUnit = _a.toggleUnit,
     unit = _a.unit;
@@ -301,11 +292,11 @@ var WeeklyWeather = function(_a) {
     React.createElement(
       "div",
       { className: "weather-info" },
-      React.createElement(
-        "div",
-        { className: "weather-icon" },
-        React.createElement(ReactSkycons, { icon: "" + day.icon.toUpperCase() })
-      ),
+      // React.createElement(
+      //   "div",
+      //   { className: "weather-icon" },
+      //   React.createElement(ReactSkycons, { icon: "" + day.icon.toUpperCase() })
+      // ),
       React.createElement(
         "div",
         { className: "temp" },
@@ -355,11 +346,11 @@ var DailyWeather = function(_a) {
           { className: "date" },
           formatTime(currently.time)
         ),
-        React.createElement(ReactSkycons, {
-          icon: "" + currently.icon.toUpperCase(),
-          color: "white",
-          autoPlay: true
-        }),
+        // React.createElement(ReactSkycons, {
+        //   icon: "" + currently.icon.toUpperCase(),
+        //   color: "white",
+        //   autoPlay: true
+        // }),
         React.createElement("div", { className: "summary" }, currently.summary)
       ),
       React.createElement(
@@ -442,7 +433,6 @@ var WeatherApp = /** @class */ (function(_super) {
       return __awaiter(_this, void 0, void 0, function() {
         var PROXY_URL, BASE_URL, PARAM, API_KEY, unit, res, weatherInfo;
         return __generator(this, function(_a) {
-          //eslint-disable-next-line
           switch (_a.label) {
             case 0:
               PROXY_URL = "https://cors-anywhere.herokuapp.com";
@@ -542,13 +532,8 @@ var Device = function() {
     )
   );
 };
+
+//only thin in js
 export default function App() {
   return React.createElement(Device, null);
 }
-// var App = function() {
-//   return React.createElement(Device, null);
-// };
-// ReactDOM.render(
-//   React.createElement(App, null),
-//   document.getElementById("root")
-// );
