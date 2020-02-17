@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-// import Skycons from "skycons";
+// import Skycons from "react-skycons";
 import "./index.css";
 
 var __extends =
@@ -318,16 +318,78 @@ var WeeklyWeather = function(_a) {
     return moment.unix(t).format("dddd, MMM D");
   }
 };
+//starts here hourly
+var HourlyWeather = function(_a) {
+  var hour = _a.hour;
+  return React.createElement(
+    "div",
+    { className: "weather-panel" },
+    React.createElement(
+      "div",
+      { className: "overview" },
+      React.createElement("span", { className: "date" }, formatTime(hour.time)),
+      React.createElement(
+        "span",
+        { className: "summary" },
+        hour.summary
+          .split(" ")
+          .slice(0, 2)
+          .join(" ")
+      )
+    ),
+    React.createElement(
+      "div",
+      { className: "weather-info" },
+      // React.createElement(
+      //   "div",
+      //   { className: "weather-icon" },
+      //   React.createElement(ReactSkycons, { icon: "" + day.icon.toUpperCase() })
+      // ),
+      React.createElement(
+        "div",
+        { className: "temp" },
+        React.createElement(
+          "div",
+          { className: "max" },
+          Math.round(hour.temperature)
+        ),
+        React.createElement(
+          "div",
+          { className: "min" },
+          Math.round(hour.temperature)
+        )
+      )
+    )
+  );
+  function formatTime(time) {
+    var t = new Date(time);
+    return moment.unix(t).format("dddd, MMM D");
+  }
+};
+//ends here hourly
 var WeeklyWeatherList = function(_a) {
   var daily = _a.daily;
   return React.createElement(
     "div",
     { className: "weather-lists" },
+    // somthing here returning empty for some reason find out what api is returning
     daily.data.map(function(day) {
       return React.createElement(WeeklyWeather, { key: day.time, day: day });
     })
   );
 };
+//starts here for hourly
+var HourlyWeatherList = function(_a) {
+  var hourly = _a.hourly;
+  return React.createElement(
+    "div",
+    { className: "hourly-lists" },
+    hourly.data.map(function(hour) {
+      return React.createElement(HourlyWeather, { key: hour.time, hour: hour });
+    })
+  );
+};
+// ends here for hourly
 var DailyWeather = function(_a) {
   var currently = _a.currently,
     daily = _a.daily,
@@ -401,7 +463,7 @@ var DailyWeather = function(_a) {
     return moment.unix(t).format("MMMM D, h:mm");
   }
 };
-var TABS = ["Today", "Weekly", "More"];
+var TABS = ["Today", "Weekly", "Hourly", "More"];
 var WeatherApp = /** @class */ (function(_super) {
   __extends(WeatherApp, _super);
   function WeatherApp() {
@@ -484,8 +546,14 @@ var WeatherApp = /** @class */ (function(_super) {
     var _this = this;
     var _a = this.state.weather,
       currently = _a.currently,
-      daily = _a.daily;
-    if (!currently) return React.createElement("div", null, "Loading...");
+      daily = _a.daily,
+      hourly = _a.hourly;
+    if (!currently)
+      return React.createElement(
+        "div",
+        null,
+        "One moment as we pull the current weather for your current locationLoading..."
+      );
     return React.createElement(
       "div",
       { className: "weather-app" },
@@ -510,6 +578,9 @@ var WeatherApp = /** @class */ (function(_super) {
         : "",
       this.state.activeTab === "Weekly"
         ? React.createElement(WeeklyWeatherList, { daily: daily })
+        : "",
+      this.state.activeTab === "Hourly"
+        ? React.createElement(HourlyWeatherList, { hourly: hourly })
         : "",
       this.state.activeTab === "More"
         ? React.createElement(More, {
