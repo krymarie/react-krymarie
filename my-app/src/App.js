@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-// import Skycons from "react-skycons";
 import "./index.css";
 
 var __extends =
@@ -179,57 +178,6 @@ var __generator =
       return { value: op[0] ? op[1] : void 0, done: true };
     }
   };
-// var ReactSkycons = /** @class */ (function(_super) {
-//   __extends(ReactSkycons, _super);
-//   function ReactSkycons() {
-//     var _this = (_super !== null && _super.apply(this, arguments)) || this;
-//     _this.state = {
-//       skycons: new Skycons({ color: _this.props.color })
-//     };
-
-//     return _this;
-//   }
-//   ReactSkycons.prototype.componentDidMount = function() {
-//     this.state.skycons.add(
-//       ReactDOM.findDOMNode(this),
-//       Skycons[this.fixNaming(this.props.icon)]
-//     );
-//     if (this.props.autoPlay) {
-//       this.state.skycons.play();
-//     }
-//     this.fixNaming = this.fixNaming.bind(this);
-//   };
-//   ReactSkycons.prototype.componentWillReceiveProps = function(nextProps) {
-//     this.state.skycons.set(
-//       ReactDOM.findDOMNode(this),
-//       Skycons[this.fixNaming(nextProps.icon)]
-//     );
-//   };
-//   ReactSkycons.prototype.componentWillUnmount = function() {
-//     this.state.skycons.pause();
-//     this.state.skycons.remove(ReactDOM.findDOMNode(this));
-//   };
-//   ReactSkycons.prototype.play = function() {
-//     this.state.skycons.play();
-//   };
-//   ReactSkycons.prototype.pause = function() {
-//     this.state.skycons.pause();
-//   };
-//   ReactSkycons.prototype.fixNaming = function(iconName) {
-//     return iconName.replace(/-/g, "_");
-//   };
-//   ReactSkycons.prototype.render = function() {
-//     var defaultStyle = {
-//       height: "100%"
-//     };
-
-//     return React.createElement(
-//       "canvas",
-//       __assign({ style: defaultStyle }, this.props)
-//     );
-//   };
-//   return ReactSkycons;
-// })(React.Component);
 var More = function(_a) {
   var toggleUnit = _a.toggleUnit,
     unit = _a.unit;
@@ -292,11 +240,6 @@ var WeeklyWeather = function(_a) {
     React.createElement(
       "div",
       { className: "weather-info" },
-      // React.createElement(
-      //   "div",
-      //   { className: "weather-icon" },
-      //   React.createElement(ReactSkycons, { icon: "" + day.icon.toUpperCase() })
-      // ),
       React.createElement(
         "div",
         { className: "temp" },
@@ -318,7 +261,6 @@ var WeeklyWeather = function(_a) {
     return moment.unix(t).format("dddd, MMM D");
   }
 };
-//starts here hourly
 var HourlyWeather = function(_a) {
   var hour = _a.hour;
   return React.createElement(
@@ -340,11 +282,6 @@ var HourlyWeather = function(_a) {
     React.createElement(
       "div",
       { className: "weather-info" },
-      // React.createElement(
-      //   "div",
-      //   { className: "weather-icon" },
-      //   React.createElement(ReactSkycons, { icon: "" + day.icon.toUpperCase() })
-      // ),
       React.createElement(
         "div",
         { className: "temp" },
@@ -361,19 +298,16 @@ var HourlyWeather = function(_a) {
     return moment.unix(t).format("h a");
   }
 };
-//ends here hourly
 var WeeklyWeatherList = function(_a) {
   var daily = _a.daily;
   return React.createElement(
     "div",
     { className: "weather-lists" },
-    // somthing here returning empty for some reason find out what api is returning
     daily.data.map(function(day) {
       return React.createElement(WeeklyWeather, { key: day.time, day: day });
     })
   );
 };
-//starts here for hourly
 var HourlyWeatherList = function(_a) {
   var hourly = _a.hourly;
   return React.createElement(
@@ -384,7 +318,6 @@ var HourlyWeatherList = function(_a) {
     })
   );
 };
-// ends here for hourly
 var DailyWeather = function(_a) {
   var currently = _a.currently,
     daily = _a.daily,
@@ -403,11 +336,6 @@ var DailyWeather = function(_a) {
           { className: "date" },
           formatTime(currently.time)
         ),
-        // React.createElement(ReactSkycons, {
-        //   icon: "" + currently.icon.toUpperCase(),
-        //   color: "white",
-        //   autoPlay: true
-        // }),
         React.createElement("div", { className: "summary" }, currently.summary)
       ),
       React.createElement(
@@ -599,7 +527,6 @@ var Device = function() {
   );
 };
 
-//only thin in js
 export default function App() {
   return React.createElement(Device, null);
 }
