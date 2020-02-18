@@ -101,9 +101,12 @@ a:active {
   justify-content: space-around;
   align-items: center;
   margin-top: 3em;
+  border-radius: 50px;
 }
 
 .toggles a {
+  border: 1px solid lightgray;
+  border-radius: 9px;
   padding: 0.5em 1em;
   color: #fff;
 }
@@ -194,7 +197,16 @@ a:active {
   overflow: scroll;
 }
 
-.weather-lists .hourly-lists > .weather-panel {
+.hourly-lists > .weather-panel {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 1em;
+  font-size: 1.1rem;
+}
+
+.weather-lists > .weather-panel {
   background-color: #fff;
   color: #000;
   display: flex;
@@ -203,29 +215,35 @@ a:active {
   font-size: 1.1rem;
 }
 
-.weather-lists .hourly-lists .weather-panel .overview {
+.weather-lists .weather-panel .overview {
   color: #000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.weather-lists .hourly-lists .overview > span.summary {
+.weather-lists .overview > span.summary {
   padding-top: 0.3em;
   text-transform: capitalize;
   color: rgba(0, 0, 0, 0.8);
 }
 
-.weather-lists .hourly-lists .weather-panel .weather-info {
+.hourly-lists .weather-panel .weather-info {
   margin-left: auto;
   display: inline-flex;
   align-content: space-between;
 }
 
-.weather-lists .hourly-lists .weather-icon canvas {
+.weather-lists .weather-panel .weather-info {
+  margin-left: auto;
+  display: inline-flex;
+  align-content: space-between;
+}
+
+.weather-lists .weather-icon canvas {
   width: 96px;
 }
-.weather-lists .hourly-lists .weather-info .temp {
+.weather-lists .weather-info .temp {
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
@@ -237,6 +255,6 @@ a:active {
   content: "\00b0";
 }
 
-.weather-lists .hourly-lists .hourly-lists .weather-info .temp .min {
+.weather-lists .hourly-lists .weather-info .temp .min {
   color: rgba(0, 0, 0, 0.8);
 }

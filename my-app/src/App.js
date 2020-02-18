@@ -352,18 +352,13 @@ var HourlyWeather = function(_a) {
           "div",
           { className: "max" },
           Math.round(hour.temperature)
-        ),
-        React.createElement(
-          "div",
-          { className: "min" },
-          Math.round(hour.temperature)
         )
       )
     )
   );
   function formatTime(time) {
     var t = new Date(time);
-    return moment.unix(t).format("dddd, MMM D");
+    return moment.unix(t).format("h a");
   }
 };
 //ends here hourly
@@ -518,7 +513,7 @@ var WeatherApp = /** @class */ (function(_super) {
                     pos.coords.longitude +
                     "?units=" +
                     unit +
-                    "&exclude=minutely,hourly,alerts,flags"
+                    "&exclude=minutely,alerts,flags"
                 )
               ];
             case 1:
