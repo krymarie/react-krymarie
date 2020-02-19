@@ -1,5 +1,0 @@
-{
-  "extends": ["react-app"],
-  "plugins": ["jsx-a11y"]
-}
-// EXAMPLE PLUGIN "react-app", "plugin:jsx-a11y/recommended"],
