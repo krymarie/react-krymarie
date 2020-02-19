@@ -219,6 +219,7 @@ var Tab = function(_a) {
     onChangeActiveTab(name);
   }
 };
+
 var WeeklyWeather = function(_a) {
   var day = _a.day;
   return React.createElement(
@@ -457,6 +458,7 @@ var WeatherApp = /** @class */ (function(_super) {
     };
     return _this;
   }
+
   WeatherApp.prototype.componentDidMount = function() {
     this.requestLocation();
   };
