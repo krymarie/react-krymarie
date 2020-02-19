@@ -8,3 +8,5 @@
 
 -[Hourly Forcast](https://github.com/DGM3780/react-krymarie/blob/master/my-app/src/App.js#L322)
 
+Notes - Built assignment out with typescript then when compiling hit a few errors so manually compiled it. Here is the link the the original [typescript](https://github.com/DGM3780/react-krymarie/commit/c7b25308f5e74bfada99c72d69866a62b10443ce#diff-4cb3565ac7894f461151503c1a4c75c5R1).
+
