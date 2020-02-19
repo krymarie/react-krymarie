@@ -419,6 +419,7 @@ var WeatherApp = /** @class */ (function(_super) {
       return __awaiter(_this, void 0, void 0, function() {
         var PROXY_URL, BASE_URL, PARAM, API_KEY, unit, res, weatherInfo;
         return __generator(this, function(_a) {
+          // eslint-disable-next-line default-case
           switch (_a.label) {
             case 0:
               PROXY_URL = "https://cors-anywhere.herokuapp.com";
