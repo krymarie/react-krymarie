@@ -9,6 +9,7 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+<<<<<<< HEAD
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
@@ -66,3 +67,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+Notes - Built assignment out with typescript then when compiling hit a few errors so manually compiled it. Here is the link the the original [typescript](https://github.com/DGM3780/react-krymarie/commit/c7b25308f5e74bfada99c72d69866a62b10443ce#diff-4cb3565ac7894f461151503c1a4c75c5R1) A lot was changed after the compile.
+
+>>>>>>> 8d9e88782417ff416d299c4be7b28abc330dd267
